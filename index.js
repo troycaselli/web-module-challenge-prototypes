@@ -15,10 +15,33 @@
         + It should return a string with `name` and `age`. Example: "Mary, 50"
 */
 
-function Person() {
-
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  this.stomach = [];
 }
 
+Person.prototype.eat = function(food) {
+  if(this.stomach.length < 10) {
+    return this.stomach.push(food);
+  } else {
+    return `I'm full!`;
+  }
+};
+
+Person.prototype.poop = function() {
+  return this.stomach = [];
+};
+
+Person.prototype.toString = function() {
+  return `${this.name}, ${this.age}`;
+};
+
+const person1 = new Person('Troy', 27);
+console.log(person1);
+console.log(person1.eat('sandwich'));
+console.log(person1);
+console.log(person1.toString());
 
 /*
   TASK 2
@@ -57,10 +80,10 @@ function Baby() {
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global/window binding: 'this' is in reference to the JavaScript program as a whole.
+  2. Implicit binding: 'this' is understood as the object on which a method is called; it is what precedes the . in object.method().
+  3. Explicit binding: 'this' is bound to a particular context (provided inside the ()) with the methods .call(), .apply(), and .bind().
+  4. New/constructor binding: 'this' refers to a specific object created by using a template-like, constructor object.
 */
 
 ///////// END OF CHALLENGE /////////
