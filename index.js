@@ -116,10 +116,10 @@ console.log(baby1.play());
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. Global/window binding: 'this' is in reference to the JavaScript program as a whole.
-  2. Implicit binding: 'this' is understood as the object on which a method is called; it is what precedes the . in object.method().
-  3. Explicit binding: 'this' is bound to a particular context (provided inside the ()) with the methods .call(), .apply(), and .bind().
-  4. New/constructor binding: 'this' refers to a specific object created by using a template-like, constructor object.
+  1. Global/window binding: 'this' is in reference to the JavaScript program as a whole; when no other rules apply.
+  2. Implicit binding: 'this' is bound to the object on which a method is called; it is what precedes the . in object.method().
+  3. Explicit binding: 'this' is bound to a particular context (provided inside the ()) with the methods .call(), .apply(), and .bind(). .bind() does not immediately invoke, unlike the other two.
+  4. New/constructor binding: 'this' is bound to a specific object created by using a template-like, constructor object.
 */
 
 ///////// END OF CHALLENGE /////////
